@@ -1,0 +1,26 @@
+# Used by mysql module
+mysql.pass: 'pass'
+# Used by keystone module
+keystone.token: ADMIN_TOKEN
+keystone.endpoint: http://10.0.0.12:35357/v2.0
+
+keystone:
+  public_ip: 10.0.0.12
+  internal_ip: 10.0.0.12
+  admin_ip: 10.0.0.12
+  mysql:
+    ip: 10.0.0.12
+    host: '%'
+    password: 'pass'
+  memcached:
+    ip: [ 10.0.0.12 ]
+  keystone:
+    admin:
+      password: 'pass'
+      email: zhang.lei.fly@gmail.com
+  config:
+    DEFAULT:
+      #admin_token: ADMIN_TOKEN
+      debug: true
+{#- vim:ft=sls
+-#}
