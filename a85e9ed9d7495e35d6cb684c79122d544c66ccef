@@ -1,0 +1,8 @@
+Verified+2: Jenkins
+Code-Review+2: Jeffrey Zhang <zhang.lei.fly@gmail.com>
+Workflow+1: Jeffrey Zhang <zhang.lei.fly@gmail.com>
+Submitted-by: Jenkins
+Submitted-at: Wed, 15 Oct 2014 03:32:42 +0000
+Reviewed-on: https://review.openstack.org/128506
+Project: stackforge/keystone-formula
+Branch: refs/heads/master
