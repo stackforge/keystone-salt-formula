@@ -1,0 +1,8 @@
+Verified+2: Jenkins
+Code-Review+2: Jeffrey Zhang <zhang.lei.fly@gmail.com>
+Workflow+1: Jeffrey Zhang <zhang.lei.fly@gmail.com>
+Submitted-by: Jenkins
+Submitted-at: Wed, 29 Oct 2014 14:40:12 +0000
+Reviewed-on: https://review.openstack.org/129394
+Project: stackforge/keystone-salt-formula
+Branch: refs/heads/master
