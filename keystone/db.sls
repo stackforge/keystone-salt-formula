@@ -1,7 +1,7 @@
 {%- set name="keystone" %}
 
 {{ name }}-db:
-{% if salt["pillar.get"]("keystone.db.driver") == 'postgresql' %}
+{% if salt["pillar.get"]("keystone:db:driver") == 'postgresql' %}
   pkg.installed:
     - name: python-psycopg2
   postgresql_user.present:
