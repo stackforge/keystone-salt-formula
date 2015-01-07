@@ -1,7 +1,7 @@
 {%- set name="keystone" %}
 
 {{ name }}-db:
-{% if keystone.db.driver == 'postgresql' %}
+{% if salt["pillar.get"]("keystone.db.driver") == 'postgresql' %}
   postgresql_user.present:
     - name: {{ name }}
     - password: {{ salt["pillar.get"](name + ":db:password") }}
