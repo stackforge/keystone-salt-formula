@@ -27,7 +27,7 @@
     "admin_token" : salt["grains.get_or_set_hash"]("keystone:admin_token", length=20, chars="abcdefghijklmnopqrstuvwxyz0123456789"),
   },
   "database": {
-    "connection": salt["pillar.get"]("keystone:db:driver")+"://keystone:" + salt["pillar.get"]("keystone:db:password") + "@" + salt["pillar.get"]("keystone:db:ip", "localhost") + "/keystone?charset=utf8",
+    "connection": salt["pillar.get"]("keystone:db:driver") + "://keystone:" + salt["pillar.get"]("keystone:db:password") + "@" + salt["pillar.get"]("keystone:db:ip", "localhost") + "/keystone?charset=utf8",
   },
   "memcache": {
     "servers": salt["pillar.get"]("keystone:memcached:ip") |join(":11211,") + ":11211",
