@@ -4,10 +4,10 @@
 {% if salt["pillar.get"]("keystone:db:driver") == 'postgresql' %}
   pkg.installed:
     - name: python-psycopg2
-  postgresql_user.present:
+  postgres_user.present:
     - name: {{ name }}
     - password: {{ salt["pillar.get"](name + ":db:password") }}
-  postgresql_database.present:
+  postgres_database.present:
     - name: {{ name }}
     - owner: {{ name }}
 {% else %}
