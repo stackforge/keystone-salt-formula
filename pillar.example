@@ -1,5 +1,19 @@
-# Used by mysql module
+## database admin connection information to create keystone user and db
+## for mysql 
+# mysql.host: 'localhost'
+# mysql.port: 3306
+# mysql.user: 'root'
+# mysql.pass: ''
+#
+## for postgresql
+# postgres.host: 'localhost'
+# postgres.port: '5432'
+# postgres.user: 'postgres' -> db user
+# postgres.pass: ''
+# postgres.maintenance_db: 'postgres'
+
 mysql.pass: 'pass'
+
 # Used by keystone module
 keystone.token: ADMIN_TOKEN
 keystone.endpoint: http://10.0.0.12:35357/v2.0
@@ -8,8 +22,11 @@ keystone:
   public_ip: 10.0.0.12
   internal_ip: 10.0.0.12
   admin_ip: 10.0.0.12
-  mysql:
+  db:
+    # currently supported options are mysql and postgresql
+    driver: mysql
     ip: 10.0.0.12
+    # mysql user host
     host: '%'
     password: 'pass'
   memcached:

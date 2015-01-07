@@ -1,6 +1,14 @@
 {%- set name="keystone" %}
 
 {{ name }}-db:
+{% if keystone.db.driver == 'postgresql' %}
+  postgresql_user.present:
+    - name: {{ name }}
+    - password: {{ salt["pillar.get"](name + ":db:password") }}
+  postgresql_database.present:
+    - name: {{ name }}
+    - owner: {{ name }}
+{% else %}
   mysql_database.present:
     - name: {{ name }}
   mysql_user.present:
@@ -12,3 +20,4 @@
     - grant: all privileges
     - database: "{{ name }}.*"
     - user: {{ name }}
+{% endif %}
