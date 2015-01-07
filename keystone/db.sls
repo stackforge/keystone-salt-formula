@@ -13,10 +13,10 @@
     - name: {{ name }}
   mysql_user.present:
     - name: {{ name }}
-    - host: "{{ salt["pillar.get"](name + ":mysql:host","%") }}"
-    - password: {{ salt["pillar.get"](name + ":mysql:password") }}
+    - host: "{{ salt["pillar.get"](name + ":db:host","%") }}"
+    - password: {{ salt["pillar.get"](name + ":db:password") }}
   mysql_grants.present:
-    - host: "{{ salt["pillar.get"](name + ":mysql:host","%") }}"
+    - host: "{{ salt["pillar.get"](name + ":db:host","%") }}"
     - grant: all privileges
     - database: "{{ name }}.*"
     - user: {{ name }}

@@ -24,7 +24,7 @@ keystone:
   admin_ip: 10.0.0.12
   db:
     # currently supported options are mysql and postgresql
-    driver: mysql
+    driver: 'mysql'
     ip: 10.0.0.12
     # mysql user host
     host: '%'
